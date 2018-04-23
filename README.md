@@ -49,7 +49,7 @@
 
 Usage:
 
-// where
+// where<br>
 List<Integer> listWhere = new List<>(1, 2, 3);<br>
 
 List<Integer> actualWhere = listWhere.where(x -> x == 1 || x == 3).toList();<br>
@@ -58,7 +58,7 @@ assertEquals(true , actualWhere.contains(1));<br>
 assertEquals(false, actualWhere.contains(2));<br>
 assertEquals(true , actualWhere.contains(3));<br>
 
-// select
+// select<br>
 List<Person> listSelect = new List<>(
         new Person("React"   , 1),
         new Person("Angular" , 3),
@@ -71,7 +71,7 @@ assertEquals("React"   , actualSelect.get(0));<br>
 assertEquals("Angular" , actualSelect.get(1));<br>
 assertEquals("Backbone", actualSelect.get(2));<br>
 
-// orderBy
+// orderBy<br>
 List<String> listOrderBy = new List<>("Backbone", "Angular", "React");<br>
 
 List<String> actualOrderBy = listOrderBy.orderBy(x -> x).toList();<br>
@@ -80,7 +80,7 @@ assertEquals("Angular" , actualOrderBy.get(0));<br>
 assertEquals("Backbone", actualOrderBy.get(1));<br>
 assertEquals("React"   , actualOrderBy.get(2));<br>
 
-// orderByDescending
+// orderByDescending<br>
 List<String> listOrderByDescending = new List<>("Backbone", "Angular", "React");<br>
 
 List<String> actualOrderByDescending = listOrderByDescending.orderByDescending(x -> x).toList();<br>
@@ -89,7 +89,7 @@ assertEquals("React"   , actualOrderByDescending.get(0));<br>
 assertEquals("Backbone", actualOrderByDescending.get(1));<br>
 assertEquals("Angular" , actualOrderByDescending.get(2));<br>
 
-// thenBy
+// thenBy<br>
 List<Person> listThenBy = new List<>(
         new Person("Angular2", 2),
         new Person("Angular1", 2),
@@ -102,7 +102,7 @@ assertEquals("React" , actualThenBy.get(0).name);<br>
 assertEquals("Angular1", actualThenBy.get(1).name);<br>
 assertEquals("Angular2"   , actualThenBy.get(2).name);<br>
 
-// thenByDescending
+// thenByDescending<br>
 List<Person> listThenByDescending = new List<>(
         new Person("Angular2", 2),
         new Person("Angular1", 2),
@@ -115,7 +115,7 @@ assertEquals("React" , actualThenByDescending.get(0).name);<br>
 assertEquals("Angular2", actualThenByDescending.get(1).name);<br>
 assertEquals("Angular1"   , actualThenByDescending.get(2).name);<br>
 
-// selectMany
+// selectMany<br>
 List<Person> listSelectMany = new List<>(
         new Person("Angular", 3, new List("1.0.1", "1.0.2")),
         new Person("React"  , 1, new List("2.0.1", "2.0.2"))
@@ -128,14 +128,14 @@ assertEquals("1.0.2", actualSelectMany.get(1));<br>
 assertEquals("2.0.1", actualSelectMany.get(2));<br>
 assertEquals("2.0.2", actualSelectMany.get(3));<br>
 
-// skip
+// skip<br>
 List<Integer> listSkip = new List<>(1, 2, 3);<br>
 
 List<Integer> actualSkip = listSkip.skip(2).toList();<br>
 
 assertEquals(3, actualSkip.get(0).intValue());<br>
 
-// skipWhile
+// skipWhile<br>
 List<Integer> listSkipWhile = new List<>(1, 2, 3, 4, 5);<br>
 
 List<Integer> actualSkipWhile = listSkipWhile.skipWhile(x -> x <= 3).toList();<br>
@@ -143,7 +143,7 @@ List<Integer> actualSkipWhile = listSkipWhile.skipWhile(x -> x <= 3).toList();<b
 assertEquals(4, actualSkipWhile.get(0).intValue());<br>
 assertEquals(5, actualSkipWhile.get(1).intValue());<br>
 
-// take
+// take<br>
 List<String> listTake = new List<>("Backbone", "Angular", "React");<br>
 
 List<String> actualTake = listTake.take(2).toList();<br>
@@ -152,7 +152,7 @@ assertEquals(2, actualTake.size());<br>
 assertEquals("Backbone", actualTake.get(0));<br>
 assertEquals("Angular" , actualTake.get(1));<br>
 
-// takeWhile
+// takeWhile<br>
 List<String> listTakeWhile = new List<>("Backbone", "Angular", "React");<br>
 
 List<String> actualTakeWhile = listTakeWhile.takeWhile(x -> x.equals("Backbone") || x.equals("Angular")).toList();<br>
@@ -161,7 +161,7 @@ assertEquals(2, actualTakeWhile.size());<br>
 assertEquals("Backbone", actualTakeWhile.get(0));<br>
 assertEquals("Angular" , actualTakeWhile.get(1));<br>
 
-// concat
+// concat<br>
 List<Integer> firstConcat  = new List<>(1, 2);<br>
 List<Integer> secondConcat= new List<>(2, 3);<br>
 
@@ -172,7 +172,7 @@ assertEquals(2, actualConcat.get(1).intValue());<br>
 assertEquals(2, actualConcat.get(2).intValue());<br>
 assertEquals(3, actualConcat.get(3).intValue());<br>
 
-// intersect
+// intersect<br>
 List<Integer> firstIntersect  = new List<>(1, 2, 3);<br>
 List<Integer> secondIntersect = new List<>(1, 3);<br>
 
@@ -181,7 +181,7 @@ List<Integer> actualIntersect = firstIntersect.intersect(secondIntersect).toList
 assertEquals(1, actualIntersect.get(0).intValue());<br>
 assertEquals(3, actualIntersect.get(1).intValue());<br>
 
-// union
+// union<br>
 List<Integer> firstUnion = new List<>(1, 2, 3);<br>
 List<Integer> secondUnion = new List<>(0, 1, 3, 4);<br>
 
@@ -194,7 +194,7 @@ assertEquals(3, actualUnion.get(2).intValue());<br>
 assertEquals(0, actualUnion.get(3).intValue());<br>
 assertEquals(4, actualUnion.get(4).intValue());<br>
 
-// except
+// except<br>
 List<Integer> firstExcept  = new List<>(1, 2, 3);<br>
 List<Integer> secondExcept = new List<>(1, 3);<br>
 
@@ -202,7 +202,7 @@ List<Integer> actualExcept = firstExcept.except(secondExcept).toList();<br>
 
 assertEquals(2, actualExcept.get(0).intValue());<br>
 
-// join
+// join<br>
 List<Person> outerJoin = new List<>(
         new Person("Angular", 1),
         new Person("React"  , 4),
@@ -228,7 +228,7 @@ assertEquals(2, actualJoin.get(0).age);<br>
 assertEquals(3, actualJoin.get(1).age);<br>
 assertEquals(6, actualJoin.get(2).age);<br>
 
-// groupJoin
+// groupJoin<br>
 List<Person> outerGroupJoin = new List<>(
         new Person("Angular", 1),
         new Person("React"  , 4),
@@ -255,7 +255,7 @@ assertEquals(3, actualGroupJoin.get(0).ages.elementAt(1));<br>
 assertEquals(0, actualGroupJoin.get(1).ages.count());<br>
 assertEquals(6, actualGroupJoin.get(2).ages.elementAt(0));<br>
 
-// reverse
+// reverse<br>
 List<Integer> listReverse = new List<>(1, 2, 3);<br>
 
 List<Integer> actualReverse = listReverse.reverse().toList();<br>
@@ -264,7 +264,7 @@ assertEquals(3, actualReverse.get(0).intValue());<br>
 assertEquals(2, actualReverse.get(1).intValue());<br>
 assertEquals(1, actualReverse.get(2).intValue());<br>
 
-// zip
+// zip<br>
 List<Integer> firstZip = new List<>(1, 2, 3);<br>
 List<String> secondZip = new List<>("Angular", "React", "Backbone");<br>
 
@@ -274,7 +274,7 @@ assertEquals("1 Angular" , actualZip.get(0));<br>
 assertEquals("2 React"   , actualZip.get(1));<br>
 assertEquals("3 Backbone", actualZip.get(2));<br>
 
-// distinct
+// distinct<br>
 List<Integer> listDistinct =
         new List<>(
                 1, 2, 3,
@@ -288,14 +288,14 @@ assertEquals(2, actualDistinct.get(1).intValue());<br>
 assertEquals(3, actualDistinct.get(2).intValue());<br>
 assertEquals(4, actualDistinct.get(3).intValue());<br>
 
-// aggregate
+// aggregate<br>
 List<Integer> listAggregate = new List<>(1, 2, 3);<br>
 
 int actualAggregate = listAggregate.aggregate((sum, elem) -> sum + elem);<br>
 
 assertEquals(6, actualAggregate);<br>
 
-// groupBy
+// groupBy<br>
 List<Person> listGroupBy = new List<>(
         new Person("React"   , 1),
         new Person("Angular" , 1),
@@ -308,14 +308,14 @@ assertEquals(true, actualGroupBy.get(1).any(x -> x.name.equals("React")));<br>
 assertEquals(true, actualGroupBy.get(1).any(x -> x.name.equals("Angular")));<br>
 assertEquals(true, actualGroupBy.get(5).any(x -> x.name.equals("Backbone")));<br>
 
-// average
+// average<br>
 List<Long> listLongAverage = new List<>(1l, 2l, 3l, 4l);<br>
 
 double actualLongAverage = listLongAverage.averageLong(x -> x);<br>
 
 assertEquals(2.5d, actualLongAverage, 0);<br>
 
-// count
+// count<br>
 List<String> listCount = new List<>("Backbone", "Angular", "React");<br>
 
 long actualCount = listCount.longCount();<br>
@@ -324,14 +324,14 @@ int actualNoneCount = listCount.count(x -> x.equals("jquery"));<br>
 assertEquals(3, actualCount);<br>
 assertEquals(0, actualNoneCount);<br>
 
-// max
+// max<br>
 List<Double> listDoubleMax = new List<>(1d, 2d, 3d);<br>
 
 double actualDoubleMax = listDoubleMax.max(x -> x);<br>
 
 assertEquals(3d, actualDoubleMax, 0);<br>
 
-// min
+// min<br>
 List<BigDecimal> listBigDecimalMin = new List<>(
         new BigDecimal(1d),
         new BigDecimal(2d),
@@ -342,14 +342,14 @@ BigDecimal actualBigDecimalMin = listBigDecimalMin.min(x -> x);<br>
 
 assertEquals(1d, actualBigDecimalMin.doubleValue(), 0);<br>
 
-// sum
+// sum<br>
 List<Integer> listIntSum = new List<>(1, 2, 3);<br>
 
 int actualIntSum = listIntSum.sumInt(x -> x);<br>
 
 assertEquals(6, actualIntSum);<br>
 
-// firstOrDefault
+// firstOrDefault<br>
 List<String> listFirstOrDefault = new List<>("Backbone", "Angular", "React");<br>
 
 String actualFirstFirstOrDefault   = listFirstOrDefault.firstOrDefault();<br>
@@ -360,7 +360,7 @@ assertEquals("Backbone", actualFirstFirstOrDefault);<br>
 assertEquals("Angular" , actualMatchFirstOrDefault);<br>
 assertEquals(null      , actualUnMatchFirstOrDefault);<br>
 
-// lastOrDefault
+// lastOrDefault<br>
 List<Integer> listLastOrDefault = new List<>(1, 2, 3);<br>
 List<Integer> listEmptyLastOrDefault = new List<>();<br>
 
@@ -370,7 +370,7 @@ Integer actualDefaultNoneLastOrDefault = listEmptyLastOrDefault.lastOrDefault(x 
 assertEquals(3, actualLastOrDefault);<br>
 assertEquals(null, actualDefaultNoneLastOrDefault);<br>
 
-// singleOrDefault
+// singleOrDefault<br>
 List<Integer> listManySingleOrDefault = new List<>(1, 2, 3);<br>
 List<Integer> listEmptySingleOrDefault = new List<>();<br>
 
@@ -380,14 +380,14 @@ Integer actualUnMatchSingleOrDefault = listEmptySingleOrDefault.singleOrDefault(
 assertEquals(3, actualFilterSingleOrDefault);<br>
 assertEquals(null, actualUnMatchSingleOrDefault);<br>
 
-// defaultIfEmpty
+// defaultIfEmpty<br>
 List<String> listEmpty = new List<>();<br>
 
 List<String> actualDefault = listEmpty.defaultIfEmpty("ES7").toList();<br>
 
 assertEquals("ES7", actualDefault.get(0));<br>
 
-// elementAtOrDefault
+// elementAtOrDefault<br>
 List<Integer> listElementAtOrDefault = new List<>(1, 2, 3);<br>
 
 int actualElementAtOrDefault = listElementAtOrDefault.elementAtOrDefault(2);<br>
@@ -396,7 +396,7 @@ Integer actualDefaultElementAtOrDefault = listElementAtOrDefault.elementAtOrDefa
 assertEquals(3, actualElementAtOrDefault);<br>
 assertEquals(null, actualDefaultElementAtOrDefault);<br>
 
-// all
+// all<br>
 List<String> listAll = new List<>("Backbone", "Angular", "React");<br>
 
 boolean actualAll = listAll.all(x -> x.equals("Angular") || x.equals("Backbone") || x.equals("React"));<br>
@@ -405,7 +405,7 @@ boolean actualNotFoundAll = listAll.all(x -> x.equals("Angular") || x.equals("Re
 assertEquals(true, actualAll);<br>
 assertEquals(false, actualNotFoundAll);<br>
 
-// any
+// any<br>
 List<String> listAny = new List<>("Backbone", "Angular", "React");<br>
 
 boolean actualAny = listAny.any(x -> x.equals("Angular"));<br>
@@ -414,25 +414,25 @@ boolean actualNotFoundAny = listAny.any(x -> x.equals("jquery"));<br>
 assertEquals(true, actualAny);<br>
 assertEquals(false, actualNotFoundAny);<br>
 
-// empty
+// empty<br>
 List<Double> actualEmpty = IEnumerable.empty(Double.class);<br>
 
 assertEquals(0, actualEmpty.count());<br>
 
-// range
+// range<br>
 List<Integer> actualRange = IEnumerable.range(-2, 3);<br>
 
 assertEquals(-2, actualRange.get(0).intValue());<br>
 assertEquals(-1, actualRange.get(1).intValue());<br>
 assertEquals(0 , actualRange.get(2).intValue());<br>
 
-// repeat
+// repeat<br>
 List<String> actualRepeat = IEnumerable.repeat(String.class, "Law of Cycles", 10);<br>
 
 assertEquals(10, actualRepeat.count());<br>
 assertEquals("Law of Cycles", actualRepeat.get(9));<br>
 
-// sequenceEqual
+// sequenceEqual<br>
 List<Integer> firstSequenceEqual = new List<>(1, 2, 3);<br>
 List<Integer> secondMatchSequenceEqual = new List<>(1, 2, 3);<br>
 List<Integer> secondUnMatchElemSequenceEqual = new List<>(1, 2, 4);<br>
@@ -443,7 +443,7 @@ boolean actualUnMatchElmSequenceEqual = firstSequenceEqual.sequenceEqual(secondU
 assertEquals(true, actualMatchSequenceEqual);<br>
 assertEquals(false, actualUnMatchElmSequenceEqual);<br>
 
-// cast
+// cast<br>
 List<Object> listCast = new List<>(1, 2, 3);<br>
 
 List<Integer> actualCast = listCast.cast(Integer.class).toList();<br>
@@ -452,7 +452,7 @@ assertEquals(1, actualCast.get(0).intValue());<br>
 assertEquals(2, actualCast.get(1).intValue());<br>
 assertEquals(3, actualCast.get(2).intValue());<br>
 
-// ofType
+// ofType<br>
 List<Object> listOfType = new List<>(1, "2", 3, "4");<br>
 
 List<String>  actualStrOfType = listOfType.ofType(String.class).toList();<br>
