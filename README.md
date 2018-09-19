@@ -1,6 +1,6 @@
 # java Linq
 
-[Maven Repository](http://mvnrepository.com/artifact/com.github.wyhb.joe/jLinq/1.0.0.0)
+[Maven Repository jLinq](http://mvnrepository.com/artifact/com.github.wyhb.joe/jLinq/1.0.0.0)
 
 |jLinq|C#|Stream|
 |:--:|:--:|:--:|
