@@ -1,9 +1,13 @@
-# java Linq
+* **Documentation:** https://github.com/wyhb/jLinq/blob/master/README.md
+* **Download Instructions:** https://github.com/wyhb/jLinq/archive/master.zip
+* **GitHub:** https://github.com/wyhb/jLinq
+* **Free Software:** MIT License
+* **Requirements:** Java 1.8
+* **Maven Repository:** http://mvnrepository.com/artifact/com.github.wyhb.joe/jLinq/1.0.0.0
+* **Comparative List:**<br>
 
-[Maven Repository jLinq](http://mvnrepository.com/artifact/com.github.wyhb.joe/jLinq/1.0.0.0)
-
-|jLinq|C#|Java 8 Stream|
-|:--:|:--:|:--:|
+jLinq|C#|Java 8 Stream
+------------ | ------------- | -------------
 |where|Where|filter|
 |select|Select|map|
 |orderBy|OrderBy|sorted|
@@ -50,9 +54,9 @@
 |cast|Cast|n/a|
 |ofType|OfType|n/a|
 
-Usage:
+* **Usage:**<br>
 
-**where<br>
+**where**
 ```
 List<Integer> listWhere = new List<>(1, 2, 3);
 
