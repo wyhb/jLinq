@@ -1,1 +1,2 @@
-doc/* linguist-documentation
+docs/* linguist-documentation
+src/*.java linguist-language=Java
